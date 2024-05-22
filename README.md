@@ -3,4 +3,4 @@ A conversation during a technical inteview caused me to think about this basic i
 
 ## Screenshots
 
-![Demo](../TabSelectorExperiments/screen_recording.mp4)
+![Demo](screenrecording.gif)
