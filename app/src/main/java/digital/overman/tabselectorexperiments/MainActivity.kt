@@ -1,6 +1,7 @@
 package digital.overman.tabselectorexperiments
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -8,10 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import digital.overman.tabselectorexperiments.ui.theme.TabSelectorExperimentsTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,15 +20,43 @@ class MainActivity : ComponentActivity() {
             TabSelectorExperimentsTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Box(
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier
+                            .padding(innerPadding)
                             .fillMaxSize()
                     ) {
                         ItemContainer(
                             listOf(
-                                "All",
-                                "Some",
-                                "Other",
-//                                "Most"
+                                TabItem("All") {
+                                    Toast.makeText(
+                                        this@MainActivity,
+                                        "All clicked",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                },
+                                TabItem("Some") {
+                                    Toast.makeText(
+                                        this@MainActivity,
+                                        "Some clicked",
+                                        Toast.LENGTH_SHORT
+                                    )
+                                        .show()
+                                },
+                                TabItem("Other") {
+                                    Toast.makeText(
+                                        this@MainActivity,
+                                        "Other clicked",
+                                        Toast.LENGTH_SHORT
+                                    )
+                                        .show()
+                                },
+                                TabItem("Most") {
+                                    Toast.makeText(
+                                        this@MainActivity,
+                                        "Most Clicked",
+                                        Toast.LENGTH_SHORT
+                                    )
+                                        .show()
+                                },
                             ),
                         )
                     }
