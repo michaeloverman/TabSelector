@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import digital.overman.tabselectorexperiments.ui.theme.TabSelectorExperimentsTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,6 +24,7 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier
                             .padding(innerPadding)
                             .fillMaxSize()
+                            .padding(16.dp)
                     ) {
                         ItemContainer(
                             listOf(
